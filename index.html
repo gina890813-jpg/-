@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>錯字搜查隊 - 東大三下第二課</title>
+    <title>錯字搜查隊 - 東大三下第五課</title>
     <!-- 引入 Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- 引入 html2pdf.js 用於生成 PDF -->
@@ -361,7 +361,7 @@
             <h1 class="text-5xl font-bold mb-4 text-teal-700 tracking-wider">錯字搜查隊</h1>
             <div class="bg-teal-50 rounded-xl p-4 mb-6 border border-teal-100">
                 <!-- 加上 ID 方便讀取範圍 -->
-                <h2 id="gameRangeDisplay" class="text-xl font-bold text-gray-700">範圍：東大三下第二課</h2>
+                <h2 id="gameRangeDisplay" class="text-xl font-bold text-gray-700">範圍：東大三下第五課</h2>
             </div>
 
             <!-- 姓名輸入 -->
@@ -559,34 +559,16 @@
         speechUtterance.lang = 'zh-TW'; 
 
         // 題目資料 (由生成器替換)
-        const QUESTIONS_DB = {
-    word: [
-        { id: 'w1', q: "[]砂", options: ["珠", "硃", "洙"], a: "硃", full: "硃砂" },
-        { id: 'w2', q: "錙[]必較", options: ["珠", "株", "銖"], a: "銖", full: "錙銖必較" },
-        { id: 'w3', q: "姿顏[]麗", options: ["殊", "姝", "舒"], a: "姝", full: "姿顏姝麗" },
-        { id: 'w4', q: "[]絲馬跡", options: ["蛛", "珠", "朱"], a: "蛛", full: "蛛絲馬跡" },
-        { id: 'w5', q: "守[]待兔", options: ["珠", "硃", "株"], a: "株", full: "守株待兔" },
-        { id: 'w6', q: "懸[]", options: ["殊", "姝", "叔"], a: "殊", full: "懸殊" },
-        { id: 'w7', q: "口[]筆伐", options: ["諸", "珠", "誅"], a: "誅", full: "口誅筆伐" },
-        { id: 'w8', q: "曉[]", options: ["諭", "喻", "愉"], a: "諭", full: "曉諭" },
-        { id: 'w9', q: "[]時不候", options: ["瑜", "逾", "愉"], a: "逾", full: "逾時不候" },
-        { id: 'w10', q: "至死不[]", options: ["逾", "渝", "愉"], a: "渝", full: "至死不渝" },
-        { id: 'w11', q: "桑[]晚景", options: ["榆", "愉", "瑜"], a: "榆", full: "桑榆晚景" }
-    ],
-    sentence: [
-        { id: 's1', q: "這件古董上印有鮮紅的珠砂印記。", wrong: "珠", a: "硃", full: "這件古董上印有鮮紅的硃砂印記。" },
-        { id: 's2', q: "做生意要講誠信，不應該在小錢上錙珠必較。", wrong: "珠", a: "銖", full: "做生意要講誠信，不應該在小錢上錙銖必較。" },
-        { id: 's3', q: "畫中的女子姿顏殊麗，令人印象深刻。", wrong: "殊", a: "姝", full: "畫中的女子姿顏姝麗，令人印象深刻。" },
-        { id: 's4', q: "偵查人員在現場仔細搜尋，不放過任何珠絲馬跡。", wrong: "珠", a: "蛛", full: "偵查人員在現場仔細搜尋，不放過任何蛛絲馬跡。" },
-        { id: 's5', q: "想要成功就得努力，不能總是守珠待兔。", wrong: "珠", a: "株", full: "想要成功就得努力，不能總是守株待兔。" },
-        { id: 's6', q: "這兩位選手的實力非常懸姝，比賽結果顯而易見。", wrong: "姝", a: "殊", full: "這兩位選手的實力非常懸殊，比賽結果顯而易見。" },
-        { id: 's7', q: "他在報紙上發表文章，對這種不義行為口珠筆伐。", wrong: "珠", a: "誅", full: "他在報紙上發表文章，對這種不義行為口誅筆伐。" },
-        { id: 's8', q: "政府出示曉喻，要求居民配合防疫措施。", wrong: "喻", a: "諭", full: "政府出示曉諭，要求居民配合防疫措施。" },
-        { id: 's9', q: "請準時參加面試，愉時不候。", wrong: "愉", a: "逾", full: "請準時參加面試，逾時不候。" },
-        { id: 's10', q: "他們兩人的愛情經歷了多年考驗，依然至死不逾。", wrong: "逾", a: "渝", full: "他們兩人的愛情經歷了多年考驗，依然至死不渝。" },
-        { id: 's11', q: "爺爺說雖然已是桑愉晚景，但仍要活得精彩。", wrong: "愉", a: "榆", full: "爺爺說雖然已是桑榆晚景，但仍要活得精彩。" }
-    ]
-};
+        □炙人口形容為人讚賞的詩文，或流行一時的事物。	膾	ㄎㄨㄞˋ
+	狡□多詐詭變多詐。	獪	ㄎㄨㄞˋ
+	□子手	劊	ㄎㄨㄞˋ
+	□飯、大雜□	燴	ㄏㄨㄟˋ
+	蘆□、人文□萃比喻傑出人物會聚。	薈	ㄏㄨㄟˋ
+2.此	目□盡裂、睚□必報指極小的怨恨也一定要報復。	眥	ㄗˋ
+	□牙咧嘴凶狠的樣子。或形容因痛苦或驚恐而面部扭曲變形。	齜	ㄗ
+	所費不□耗費無數資財。	貲	ㄗ
+	瑕□、吹毛求□比喻刻意挑剔過失或缺點。	疵	ㄘ
+	□雄莫辨、決一□雄、信口□黃、不甘□伏比喻人不甘心默默無聞，屈居人下，無所作為。	雌	ㄘ
 
         const gameState = {
             studentName: '',
